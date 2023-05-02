@@ -1,0 +1,26 @@
+<div class="box">
+  <h2>Empleado</h2>
+  <hr>
+
+  <div>
+    <div *ngIf="!empleado; else divTabla" class="alert alert-warning text-center">
+      Cargando datos...</div>
+  </div>
+
+  <ng-template #divTabla>
+    <div class="row">
+      <div class="col mb-3">
+        <div>
+          <h4 class="my-4">Nombre: {{empleado['employee_name']!}}</h4>
+          <p>Salario: {{empleado['employee_salary']! | number}} €</p>
+          <p>Edad: {{empleado['employee_age']!}} años</p>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+
+  <button [routerLink]="['/empleados/employees']" class="btn btn-warning w-25 float-end">Volver al listado</button>
+</div>
+
+
+

@@ -1,0 +1,39 @@
+<div class="box">
+  <h2>Listado de empleados</h2>
+  <hr>
+
+  <div class="d-flex justify-content-center">
+    <div *ngIf="empleados.length === 0; else divTabla" class="alert alert-warning text-center">
+      Cargando datos...</div>
+  </div>
+
+  <ng-template #divTabla>
+    <div class="row">
+      <div class="col d-flex justify-content-center">
+        <table>
+          <th class="text-center" colspan="4">Empleados</th>
+          <tr>
+            <td class="text-center">Número Id</td>
+            <td class="text-center">Nombre</td>
+            <td class="text-center">Salario</td>
+            <td class="text-center">Edad</td>
+            <td></td>
+          </tr>
+
+          <tr *ngFor="let empleado of empleados">
+            <td class="py-2 px-5 text-center">{{empleado['id']}}</td>
+            <td class="py-2 px-5 text-center">{{empleado['employee_name']}}</td>
+            <td class="py-3 px-5 text-center">{{empleado['employee_salary'] | number}} €</td>
+            <td class="py-2 px-5 text-center">{{empleado['employee_age']}} años</td>
+            <td class="py-2 px-5">
+            <div class="boton">
+              <button [routerLink]="['/empleados/employee/', empleado['id']]" class="btn btn-warning">Ver empleado</button>
+            </div>
+            </td>
+          </tr>
+
+        </table>
+      </div>
+    </div>
+  </ng-template>
+</div>
