@@ -7,13 +7,15 @@ import { EmpleadoComponent } from './pages/empleado/empleado.component';
 import { ListadoComponent } from './pages/listado/listado.component';
 import { CrearComponent } from './pages/crear/crear.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { CrearReactivesComponent } from './pages/crear-reactives/crear-reactives.component';
 
 
 @NgModule({
   declarations: [
     EmpleadoComponent,
     ListadoComponent,
-    CrearComponent
+    CrearComponent,
+    CrearReactivesComponent
   ],
   imports: [
     CommonModule,

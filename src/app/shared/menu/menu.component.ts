@@ -15,7 +15,11 @@ export class MenuComponent {
   menuItems: MenuItem[] = [
     {
       ruta: '/empleados/create',
-      nombre: 'Crear empleado'
+      nombre: 'Crear empleado Template'
+    },
+    {
+      ruta: '/empleados/create-reactives',
+      nombre: 'Crear empleado Reactivo'
     },
     {
       ruta: '/empleados/employees',

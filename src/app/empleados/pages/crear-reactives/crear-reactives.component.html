@@ -1,0 +1,47 @@
+<div class="box">
+    <h2>Crear empleado</h2>
+    <hr>
+  
+    <div class="row">
+      <div class="col">
+  
+        <form [formGroup]="miForm" (ngSubmit)="guardar()">
+          <div class="row mb-3">
+            <div class="col">
+              <div class="form-floating">
+                <input class="form-control" type="text" formControlName="name">
+                <label class="col-form-label">Nombre empleado</label>
+              </div>
+              <span class="text-danger" *ngIf="campoValido('name')">El nombre es obligatorio</span>
+            </div>
+          </div>
+  
+          <div class="row mb-3">
+            <div class="col">
+              <div class="form-floating">
+                <input class="form-control" type="number" formControlName="salary">
+                <label class="">Salario empleado</label>
+              </div>
+              <span class="text-danger" *ngIf="campoValido('salary')">El salario es obligatorio</span>
+            </div>
+          </div>
+  
+          <div class="row">
+            <div class="col">
+              <div class="form-floating">
+                <input class="form-control" type="number" formControlName="age">
+                <label class="col-form-label">Edad empleado</label>
+              </div>
+              <span class="text-danger" *ngIf="campoValido('age')">La edad es obligatorio</span>
+            </div>
+          </div>
+  
+          <button class="btn btn-primary mt-4 float-end" (keydown.enter)="guardar()">Crear</button>
+        </form>
+  
+      </div>
+    </div>
+  
+  </div>
+  
+  

@@ -33,10 +33,6 @@ export class CrearComponent implements OnInit {
   }
 
   guardar() {
-    // if(this.miForm.invalid) {
-    //   this.miForm.markAllAsTouched()//antes de mandar toca todos los campos
-    //   return
-    // }
 
     this._empleadoService.createEmployee(this.empleado).subscribe(
       empleado => {
